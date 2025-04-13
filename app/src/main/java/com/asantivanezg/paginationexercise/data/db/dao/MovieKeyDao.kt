@@ -13,7 +13,7 @@ interface MovieKeyDao {
     suspend fun getMovieKeys(id: String): MovieKey
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addAllMovieKeys(quoteRemoteKeys: List<MovieKey>)
+    suspend fun addAllMovieKeys(movieKeys: List<MovieKey>)
 
     @Query("DELETE FROM MovieKey")
     suspend fun deleteAllMovieKey()

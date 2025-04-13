@@ -13,7 +13,7 @@ interface MovieDao {
     fun getMovies() : PagingSource<Int, MovieEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addMovies(quotes : List<MovieEntity>)
+    suspend fun addMovies(movies : List<MovieEntity>)
 
     @Query("DELETE FROM movie")
     suspend fun deleteMovies()

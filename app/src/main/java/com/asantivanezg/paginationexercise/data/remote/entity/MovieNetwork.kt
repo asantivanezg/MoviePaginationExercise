@@ -1,4 +1,4 @@
-package com.asantivanezg.paginationexercise.data.remote.model
+package com.asantivanezg.paginationexercise.data.remote.entity
 
 import com.google.gson.annotations.SerializedName
 
