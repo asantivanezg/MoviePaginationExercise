@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt.plugin)
+    alias(libs.plugins.secrets.gradle.plugin)
     kotlin("kapt")
 }
 
@@ -56,6 +57,7 @@ dependencies {
     // retrofit
     implementation(libs.retrofit)
     implementation(libs.gson)
+    implementation(libs.gson.converter)
 
     // hilt
     implementation(libs.hilt.android)
