@@ -29,10 +29,8 @@ android {
         debug {
             val baseUrl = "https://api.themoviedb.org"
             buildConfigField("String", "BASE_URL", "\"$baseUrl\"")
-            val token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZjA0NDYwMmY3YjAwZjhiMDE2MGMyZTFmYTViMTZjNiIsIm5iZiI6MTU0OTA2MDc0Ni44NDUsInN1YiI6IjVjNTRjYThhYzNhMzY4MGI1Nzg0NDRjOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.D_w_Yb4TOLRYlS_onBW4k8AXBrtuiNZWKbb6iGVp3II"
+            val token = "INSERT_ACCESS_TOKEN"
             buildConfigField("String", "TOKEN", "\"$token\"")
-            val apiKey = "bf044602f7b00f8b0160c2e1fa5b16c6"
-            buildConfigField("String", "API_KEY", "\"$apiKey\"")
         }
     }
     compileOptions {
