@@ -14,7 +14,7 @@ An Android application built with Kotlin that consumes [TheMovieDB](https://www.
 - **Navigation (Type-Safe)** – Safe and structured navigation using Compose Navigation.
 - **Kotlin Coroutines + Flows** – For asynchronous and reactive programming.
 - **Hilt** – Scalable dependency injection framework.
-- **Paging 3 + RemoteMediator** – Efficient data loading with local caching and remote API.
+- **Paging 3** – Efficient data loading with local caching and remote API.
 - **Version Catalog** – Centralized dependency management.
 - **Clean Architecture**:
   - **Data Layer**: API (Retrofit), database (Room), RemoteMediator.
@@ -27,7 +27,7 @@ An Android application built with Kotlin that consumes [TheMovieDB](https://www.
 
 ```
 ├── data
-│   ├── local (Room)
+│   ├── db (Room)
 │   ├── remote (Retrofit + DTOs)
 │   └── repository
 ├── domain
@@ -97,7 +97,7 @@ Aplicación Android desarrollada en Kotlin que consume la API de [TheMovieDB](ht
 
 ```
 ├── data
-│   ├── local (Room)
+│   ├── db (Room)
 │   ├── remote (Retrofit + DTOs)
 │   └── repository
 ├── domain
