@@ -1,16 +1,16 @@
 package com.asantivanezg.paginationexercise.di
 
-import android.content.Context
+import com.asantivanezg.paginationexercise.BuildConfig
+import com.asantivanezg.paginationexercise.data.remote.api_service.ApiService
 import com.asantivanezg.paginationexercise.data.remote.interceptor.TokenInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -20,10 +20,10 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideHttpClient(@ApplicationContext context: Context): OkHttpClient {
+    fun provideHttpClient(): OkHttpClient {
         val builder = OkHttpClient.Builder()
         val timeout = if (BuildConfig.DEBUG) 45L else 60L
-        builder.addInterceptor(TokenInterceptor(context))
+        builder.addInterceptor(TokenInterceptor())
         builder.retryOnConnectionFailure(true)
         return if (BuildConfig.DEBUG) {
             val loggingInterceptor = HttpLoggingInterceptor()
@@ -53,4 +53,7 @@ object NetworkModule {
             .build()
     }
 
+    @Provides
+    @Singleton
+    fun provideMovieApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
 }
