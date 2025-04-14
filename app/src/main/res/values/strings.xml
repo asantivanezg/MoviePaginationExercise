@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MoviePaginationExercise</string>
+
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="passwod">Contraseña</string>
+    <string name="username">Usuario</string>
+    <string name="login">Ingresar</string>
+    <string name="movie_empty">Todavía no hay películas</string>
+    <string name="error_message">Ha ocurrido un error</string>
 </resources>
