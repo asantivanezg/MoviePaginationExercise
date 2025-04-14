@@ -1,3 +1,71 @@
+[ENG]
+
+# 🎬 MovieApp – Movie Catalog using TheMovieDB
+
+An Android application built with Kotlin that consumes [TheMovieDB](https://www.themoviedb.org/) API to display a movie catalog, including popular movies, categories, search, and detailed information. It follows a modern and robust multi-layer architecture using cutting-edge technologies.
+
+---
+
+## 🚀 Tech Stack
+
+- **Jetpack Compose** – Modern, declarative UI toolkit.
+- **Retrofit + OkHttp** – For REST API communication.
+- **Room** – Local database for caching.
+- **Navigation (Type-Safe)** – Safe and structured navigation using Compose Navigation.
+- **Kotlin Coroutines + Flows** – For asynchronous and reactive programming.
+- **Hilt** – Scalable dependency injection framework.
+- **Paging 3 + RemoteMediator** – Efficient data loading with local caching and remote API.
+- **Version Catalog** – Centralized dependency management.
+- **Clean Architecture**:
+  - **Data Layer**: API (Retrofit), database (Room), RemoteMediator.
+  - **Domain Layer**: Use cases and domain models.
+  - **Presentation Layer**: UI (Compose), ViewModels, Flows.
+
+---
+
+## 🧱 Project Structure
+
+```
+├── data
+│   ├── local (Room)
+│   ├── remote (Retrofit + DTOs)
+│   └── repository
+├── domain
+│   ├── model
+│   └── usecase
+├── presentation
+│   ├── navigation (type-safe)
+│   ├── ui (Compose screens)
+│   └── viewmodel
+├── di (Hilt modules)
+├── utils (extensions, helpers, etc.)
+└── build.gradle.kts
+```
+
+---
+
+## 🔧 Setup Instructions
+
+1. **Get an Access Token**
+   - Go to: https://www.themoviedb.org/settings/api
+   - Create an account (if you don’t have one), then generate a **v4 Access Token**.
+
+2. **Replace Access Token in `build.gradle.kts` (App-level)**
+
+```kotlin
+buildConfigField("String", "ACCESS_TOKEN", "\"INSERT_ACCESS_TOKEN\"")
+```
+
+➡️ Replace `"INSERT_ACCESS_TOKEN"` with your actual token:
+
+```kotlin
+buildConfigField("String", "ACCESS_TOKEN", "\"eyJhbGciOiJI...\"")
+```
+
+> 🔒 *For security reasons, **do not** commit your token to a public repository.*
+
+[ESP]
+
 # 🎬 MovieApp - Catálogo de Películas con TheMovieDB
 
 Aplicación Android desarrollada en Kotlin que consume la API de [TheMovieDB](https://www.themoviedb.org/) para mostrar un catálogo de películas populares, detalladas por categorías, con posibilidad de búsqueda y detalles individuales. Está construida con una arquitectura robusta y moderna utilizando tecnologías de vanguardia.
