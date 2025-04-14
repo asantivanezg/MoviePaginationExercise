@@ -64,9 +64,9 @@ buildConfigField("String", "ACCESS_TOKEN", "\"eyJhbGciOiJI...\"")
 
 > 🔒 *For security reasons, **do not** commit your token to a public repository.*
 
-
-
-
+---
+---
+---
 
 [ESP]
 
